@@ -14,23 +14,23 @@ const Banner = () => {
        <button className='pt-4'> <MyNavLink>+Add Friends</MyNavLink></button>
       </div>
 
-      <div className='flex justify-between container mx-auto max-w-10/12'>
-         <div className='text-center border-amber-300 bg-base-200 shadow-2xl rounded-2xl'>
+      <div className='grid sm:grid-cols-2 lg:grid-cols-4 container mx-auto gap-8 max-w-10/12'>
+         <div className='text-center bg-base-200 shadow-sm py-4'>
         <p className='text-[#244D3F] text-2xl font-medium'>10</p>
-        <p className='text-[#64748B]'>Total Friends</p>
+        <p className='text-[#64748B] '>Total Friend</p>  </div>
+          
+        
+         <div className='text-center bg-base-200 shadow-sm py-4'>
+        <p className='text-[#244D3F] text-2xl font-medium'>10</p>
+        <p className='text-[#64748B]'>Total Friend</p>
         </div>
         
-         <div className='text-center border-amber-300 bg-base-200 shadow-2xl rounded-2xl'>
+         <div className='text-center bg-base-200 shadow-sm py-4'>
         <p className='text-[#244D3F] text-2xl font-medium'>10</p>
-        <p className='text-[#64748B]'>Total Friends</p>
+        <p className='text-[#64748B]'>Total Friend</p>
         </div>
         
-         <div className='text-center border-amber-300 bg-base-200 shadow-2xl rounded-2xl'>
-        <p className='text-[#244D3F] text-2xl font-medium'>10</p>
-        <p className='text-[#64748B]'>Total Friends</p>
-        </div>
-        
-         <div className='text-center border-amber-300 bg-base-200 shadow-2xl rounded-2xl'>
+         <div className='text-center bg-base-200 shadow-sm py-4'>
         <p className='text-[#244D3F] text-2xl font-medium'>10</p>
         <p className='text-[#64748B]'>Total Friends</p>
         </div>

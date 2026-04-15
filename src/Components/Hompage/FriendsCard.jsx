@@ -1,46 +1,39 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
+import Cards from '../Shared/Cards';
+import { RingLoader } from 'react-spinners';
+import useHooks from '../Shared/useHooks';
 
 const FriendsCard = () => {
-
-  const [Friends, setFriends] = useState([]);
-
+  
+  const {friends, loading} = useHooks();
+  
 
   
-    useEffect(() => {
-      const fetchData = async () => {
-        const res = await fetch("/Data.json")
-        const data = await res.json();
-        console.log(data);
-        setFriends(data);
-      };
-      fetchData();
-    }, []);
-  console.log(Friends, "friends");
+  
+   
 
   return (
-
-
-   
-
-    <div className='max-w-10/12'>
-      <h2>total friends:{Friends.length }</h2>
-         <div className="card bg-base-100 w-96 shadow-sm">
-  <figure className="px-10 pt-10">
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-      alt="Shoes"
-      className="rounded-xl" />
-  </figure>
-  <div className="card-body items-center text-center">
-    <h2 className="card-title">Card Title</h2>
-    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-   
-    
+    <> 
+      <div className='w-10/12 mx-auto m-10'>
+        <h2 className='text-2xl font-bold'>Your Friends</h2>
+      </div>
+      {loading ? <div className='flex items-center text-center justify-between text-3xl'>
+       ( <RingLoader color="#ad46ff" />)
+      </div>:(
+    <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 container mx-auto w-10/12 mb-6'>
+     
+    {
+      friends.map((friend,ind) => (
+       <Cards friend={friend} key={ind} />
+      ))
+    }
   </div>
-</div>
-   </div> 
+)}
 
+
+ 
+</>
   );
 };
 

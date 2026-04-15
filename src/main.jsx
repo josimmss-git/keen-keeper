@@ -6,6 +6,7 @@ import { createBrowserRouter } from 'react-router'
 import RootLayout from './Components/RootLayout'
 import NotFoundPage from './Components/Pages/NotFoundPage'
 import Banner from './Components/Hompage/Banner'
+import CardLayout from './Components/CardLayout/CardLayout'
 
 const router = createBrowserRouter(
 
@@ -20,20 +21,22 @@ const router = createBrowserRouter(
 
         },
         {
-          path: '/timeline',
-          element: <h2>Timeline</h2>,
+          path: '/timeline/:id',
+          element: <CardLayout />,
+     
 
         },
         {
           path: '/stats',
           element: <h2>Stats</h2>,
 
-        },
-        {
+        }, {
           path: '/timeline',
-          element: <h2>Timeline</h2>
+          element: <CardLayout />,
+     
 
         },
+       
       ],
       errorElement: <NotFoundPage />
 

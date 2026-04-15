@@ -21,7 +21,7 @@ const Navbar = () => {
           </li>
           
           <li>
-            <MyNavLink to={'/timeline'}><MdAccessTime /> Timeline</MyNavLink>
+            <MyNavLink to={'/timeline'}><MdAccessTime />Timeline</MyNavLink>
    
       </li>
           <li>
