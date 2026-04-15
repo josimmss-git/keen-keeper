@@ -1,5 +1,6 @@
 import React from 'react';
 import MyNavLink from '../Shared/MyNavLink';
+import FriendsCard from './FriendsCard';
 
 
 const Banner = () => {
@@ -34,7 +35,9 @@ const Banner = () => {
         <p className='text-[#64748B]'>Total Friends</p>
         </div>
        </div> 
-   </div>
+   
+    <FriendsCard />
+    </div>
   );
 };
 
