@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Cards = ({friend}) => {
   return (
-     <Link to={'/timeline/${friend:id}'} className="card bg-base-200 shadow-sm">
+     <Link to={`/timeline/${friend.id}`} className="card bg-base-200 shadow-sm">
 
           <figure className="px-10 pt-10">
             <img
@@ -24,7 +24,7 @@ const Cards = ({friend}) => {
         <div
   className={`p-2 text-white rounded-2xl
     ${friend.status === "on track" ? "bg-purple-500" : ""}
-    ${friend.status === "due soon" ? "bg-gray-400" : ""}
+    ${friend.status === "Almost due" ? "bg-gray-400" : ""}
     ${friend.status === "overdue" ? "bg-red-500" : ""}
   `}
 >
