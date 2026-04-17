@@ -8,6 +8,8 @@ import NotFoundPage from './Components/Pages/NotFoundPage';
 import Banner from './Components/Hompage/Banner';
 import CardLayout from './Components/CardLayout/CardLayout';
 
+import FriendProvider from './Components/Context/FriendProvider';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+      
+
+    <FriendProvider>
+      
+      <RouterProvider router={router} />
+      
+  </FriendProvider>
+      
+        
   </StrictMode>
 );

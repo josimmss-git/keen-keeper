@@ -9,7 +9,7 @@ const Cards = ({friend}) => {
             <img
               src={friend.picture}
               alt={friend.title}
-              className="rounded-xl"
+              className="rounded-full"
             />
           </figure>
 
