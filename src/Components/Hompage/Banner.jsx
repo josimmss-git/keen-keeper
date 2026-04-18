@@ -21,18 +21,18 @@ const Banner = () => {
           
         
          <div className='text-center bg-base-200 shadow-sm py-4'>
-        <p className='text-[#244D3F] text-2xl font-medium'>10</p>
-        <p className='text-[#64748B]'>Total Friend</p>
+        <p className='text-[#244D3F] text-2xl font-medium'>3</p>
+        <p className='text-[#64748B]'>On truck</p>
         </div>
         
          <div className='text-center bg-base-200 shadow-sm py-4'>
-        <p className='text-[#244D3F] text-2xl font-medium'>10</p>
-        <p className='text-[#64748B]'>Total Friend</p>
+        <p className='text-[#244D3F] text-2xl font-medium'>6</p>
+        <p className='text-[#64748B]'>Need Attention</p>
         </div>
         
          <div className='text-center bg-base-200 shadow-sm py-4'>
-        <p className='text-[#244D3F] text-2xl font-medium'>10</p>
-        <p className='text-[#64748B]'>Total Friends</p>
+        <p className='text-[#244D3F] text-2xl font-medium'>12</p>
+        <p className='text-[#64748B]'>Interactions This Month</p>
         </div>
        </div> 
    

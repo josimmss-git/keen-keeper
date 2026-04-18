@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use, useContext, useState } from 'react';
 import { useParams } from 'react-router';
 import useHooks from '../Shared/useHooks';
 import { RiNotificationSnoozeLine } from "react-icons/ri";
@@ -8,7 +8,9 @@ import { MdAddCall } from "react-icons/md";
 import { MdTextsms } from "react-icons/md";
 import { FaVideo } from "react-icons/fa";
 import { FriendContext } from '../Context/FriendProvider';
-import FriendProvider from '../Context/FriendProvider';
+import Timeline from '../Context/Timeline';
+
+
 
 
 const CardLayout = () => {
@@ -19,19 +21,28 @@ const CardLayout = () => {
 
   const { friends, loading } = useHooks();
 
-  const FriendContextList = useContext(FriendContext);
-
-  console.log(FriendContextList, "friendcontext");
 
   const expectedFriend = friends.find(
     (friend) => String(friend.id) === id
   );
+
+
+  const {timelineFriends, setTimelineFriends} = useContext(FriendContext);
+
 
   if (loading) {
     return <h2>Loading...</h2>; 
   }
 
   
+const handleTimlineFriend = () => {
+
+  
+    setTimelineFriends([...timelineFriends, expectedFriend]);
+ 
+  
+};
+//  console.log(timelineFriends, "timelinefriends"); 
 
   return (
     <div className=' mx-auto container grid sm:grid-cols-1 md:grid-cols-2 justify-around bg-base-200 gap-5 mt-12'>
@@ -96,7 +107,7 @@ const CardLayout = () => {
         <div className='inline-block bg-base-100 shadow-sm p-10 px-10 rounded-2xl mt-4 gap-5 mx-auto'>
           <p className='text-2xl font-bold p-5'>Quick Check-In</p>
        <div className='grid grid-cols-3 justify-between items-center gap-5 mx-auto container'> 
-             <button className='btn p-8'><MdAddCall />Call</button>
+             <button className='btn p-8' onClick={ handleTimlineFriend} ><MdAddCall />Call</button>
           <button className='btn p-8'><MdTextsms />Text</button>
           <button className='btn p-8'><FaVideo />Video</button>
       </div>

@@ -9,6 +9,7 @@ import Banner from './Components/Hompage/Banner';
 import CardLayout from './Components/CardLayout/CardLayout';
 
 import FriendProvider from './Components/Context/FriendProvider';
+import Timeline from './Components/Context/Timeline';
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,12 @@ const router = createBrowserRouter([
         element: <Banner />,
       },
       {
-        path: 'timeline/:id', 
+        path: 'friendDetails/:id', 
         element: <CardLayout />,
+      },
+      {
+        path: 'timeline', 
+        element: <Timeline />,
       },
       {
         path: 'stats', 

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Cards = ({friend}) => {
   return (
-     <Link to={`/timeline/${friend.id}`} className="card bg-base-200 shadow-sm">
+     <Link to={`/friendDetails/${friend.id}`} className="card bg-base-200 shadow-sm">
 
           <figure className="px-10 pt-10">
             <img
