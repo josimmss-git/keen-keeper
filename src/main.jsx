@@ -10,6 +10,7 @@ import CardLayout from './Components/CardLayout/CardLayout';
 
 import FriendProvider from './Components/Context/FriendProvider';
 import Timeline from './Components/Context/Timeline';
+import Stats from './Components/Context/Stats';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'stats', 
-        element: <h2>Stats</h2>,
+        element: <Stats />,
       },
     ],
   },
@@ -42,11 +43,11 @@ createRoot(document.getElementById('root')).render(
       
 
     <FriendProvider>
-      
+        
       <RouterProvider router={router} />
-      
+       
   </FriendProvider>
-      
+  
         
   </StrictMode>
 );

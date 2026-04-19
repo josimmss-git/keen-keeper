@@ -1,54 +1,45 @@
-import React, { use, useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router';
 import useHooks from '../Shared/useHooks';
+import { toast,ToastContainer } from "react-toastify";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { RiArchiveLine } from "react-icons/ri";
 import { MdDeleteOutline } from "react-icons/md";
 import { MdAddCall } from "react-icons/md";
 import { MdTextsms } from "react-icons/md";
 import { FaVideo } from "react-icons/fa";
+
 import { FriendContext } from '../Context/FriendProvider';
-import Timeline from '../Context/Timeline';
-
-
-
 
 const CardLayout = () => {
 
-
   const { id } = useParams();
-  
-
   const { friends, loading } = useHooks();
+  const { timelineFriends, setTimelineFriends } = useContext(FriendContext);
 
+  if (loading) return <h2>Loading...</h2>;
 
   const expectedFriend = friends.find(
     (friend) => String(friend.id) === id
   );
 
+  if (!expectedFriend) return <h2>Friend not found</h2>;
 
-  const {timelineFriends, setTimelineFriends} = useContext(FriendContext);
+  const handleTimlineFriend = (type) => {
+    const newData = {
+      id: Date.now(),
+      type: type,
+      name: expectedFriend.name,
+      date: new Date().toLocaleDateString(),
+    };
+
+    setTimelineFriends((prev) => [...prev, newData]);
 
 
-  if (loading) {
-    return <h2>Loading...</h2>; 
-  }
-
-   
-  
-
-  const handleTimlineFriend = () => {
-     
-     
-      
-    setTimelineFriends([...timelineFriends, expectedFriend]);
- 
-  
-};
-//  console.log(timelineFriends, "timelinefriends"); 
-
+   toast.success(`${type.toUpperCase()} added to timeline!`);
+  };
   return (
-    <div className=' mx-auto container grid sm:grid-cols-1 md:grid-cols-2 justify-around bg-base-200 gap-5 mt-12'>
+   <div className=' mx-auto container grid sm:grid-cols-1 md:grid-cols-2 justify-around bg-base-200 gap-5 mt-12'>
            <div className=" bg-base-200  shadow-sm text-center mt-5">
 
          
@@ -107,15 +98,39 @@ const CardLayout = () => {
            <button className='btn'> Edit</button>
           </div>
         </div>
-        <div className='inline-block bg-base-100 shadow-sm p-10 px-10 rounded-2xl mt-4 gap-5 mx-auto'>
+        <div className='inline-block bg-base-100 shadow-sm p-10 rounded-2xl mt-4'>
+
           <p className='text-2xl font-bold p-5'>Quick Check-In</p>
-       <div className='grid grid-cols-3 justify-between items-center gap-5 mx-auto container'> 
-             <button className='btn p-8' onClick={ handleTimlineFriend} ><MdAddCall />Call</button>
-          <button className='btn p-8'><MdTextsms />Text</button>
-          <button className='btn p-8'><FaVideo />Video</button>
-      </div>
+
+          <div className='grid grid-cols-3 gap-5'>
+
+            <button
+              className='btn p-8'
+              onClick={() => handleTimlineFriend("Call")}
+            >
+              <MdAddCall /> Call
+            </button>
+
+            <button
+              className='btn p-8'
+              onClick={() => handleTimlineFriend("Text")}
+            >
+              <MdTextsms /> Text
+            </button>
+
+            <button
+              className='btn p-8'
+              onClick={() => handleTimlineFriend("Video")}
+            >
+              <FaVideo /> Video
+            </button>
+               <ToastContainer />
+          </div>
+
         </div>
-     </div>
+
+      </div>
+
     </div>
   );
 };
