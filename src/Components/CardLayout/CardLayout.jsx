@@ -34,10 +34,13 @@ const CardLayout = () => {
     return <h2>Loading...</h2>; 
   }
 
+   
   
-const handleTimlineFriend = () => {
 
-  
+  const handleTimlineFriend = () => {
+     
+     
+      
     setTimelineFriends([...timelineFriends, expectedFriend]);
  
   
