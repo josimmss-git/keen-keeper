@@ -1,15 +1,21 @@
 I added my github repository that includes:
 1.Keen Keeper
-2. Sort discription 
+
+2. Sort discription.
+   
 This project is a Friend Relationship Tracker web app that helps users manage and maintain connections. Users can view friend profiles, track interactions like calls, texts, and videos, and monitor contact frequency. It includes a timeline, dinamic dashboard, and responsive design to ensure a smooth experience phone,laptop and desktop all devices.
-3. Technology I used.
+
+
+4. Technology I used.
 a.React router.
 b.Tailwind CSS
 c.Daisyui
 d.React logo
 e.Recharts
- 4. 3 key features of my project
+ 5. 3 key features of my project
  A. Interaction Tracking System
+
+ 
 
 Users can easily log interactions like Call, Text, and Video with friends. Each action automatically creates a timeline entry with date and title, helping users keep track of their communication history.
 
