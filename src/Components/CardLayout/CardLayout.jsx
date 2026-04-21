@@ -8,6 +8,7 @@ import { MdDeleteOutline } from "react-icons/md";
 import { MdAddCall } from "react-icons/md";
 import { MdTextsms } from "react-icons/md";
 import { FaVideo } from "react-icons/fa";
+import { RingLoader } from 'react-spinners';
 
 import { FriendContext } from '../Context/FriendProvider';
 
@@ -17,7 +18,7 @@ const CardLayout = () => {
   const { friends, loading } = useHooks();
   const { timelineFriends, setTimelineFriends } = useContext(FriendContext);
 
-  if (loading) return <h2>Loading...</h2>;
+  if (loading) return <h2><RingLoader color="#ad46ff" /></h2>;
 
   const expectedFriend = friends.find(
     (friend) => String(friend.id) === id

@@ -17,8 +17,8 @@ const FriendsCard = () => {
       <div className='w-10/12 mx-auto m-10'>
         <h2 className='text-2xl font-bold'>Your Friends</h2>
       </div>
-      {loading ? <div className='flex items-center text-center justify-between text-3xl'>
-       ( <RingLoader color="#ad46ff" />)
+      {loading ? <div className='flex items-center justify-center text-center text-3xl'>
+       <RingLoader color="#ad46ff" />
       </div>:(
     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 container mx-auto w-10/12 mb-6'>
      
@@ -37,3 +37,4 @@ const FriendsCard = () => {
 };
 
 export default FriendsCard;
+
