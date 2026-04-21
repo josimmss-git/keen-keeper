@@ -21,7 +21,7 @@ const Timeline = () => {
         timelineFriends.map((friend, ind) => (
           <div key={ind} className='flex items-center shadow p-4 rounded-md bg-white mb-3'>
 
-            {/* 🔣 Icon */}
+           
             <div>
               {friend.type === "Call" && (
                 <img src={Call} className='w-8' />
@@ -36,7 +36,7 @@ const Timeline = () => {
               )}
             </div>
 
-            {/* 📝 Content */}
+        
             <div className='px-5'>
               <h2>{friend.type} with {friend.name}</h2>
               <p>{friend.date}</p>

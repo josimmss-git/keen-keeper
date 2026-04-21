@@ -1,16 +1,22 @@
-# React + Vite
+I added my github repository that includes:
+1.Keen Keeper
+2. Sort discription 
+This project is a Friend Relationship Tracker web app that helps users manage and maintain connections. Users can view friend profiles, track interactions like calls, texts, and videos, and monitor contact frequency. It includes a timeline, dinamic dashboard, and responsive design to ensure a smooth experience phone,laptop and desktop all devices.
+3. Technology I used.
+a.React router.
+b.Tailwind CSS
+c.Daisyui
+d.React logo
+e.Recharts
+ 4. 3 key features of my project
+ A. Interaction Tracking System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Users can easily log interactions like Call, Text, and Video with friends. Each action automatically creates a timeline entry with date and title, helping users keep track of their communication history.
 
-Currently, two official plugins are available:
+ B. Visual Statistics Dashboard
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The app provides a stats page with a pie chart that shows the distribution of calls, texts, and video interactions. This helps users quickly understand their communication habits.
+ C. Dynamic Friend Management
 
-## React Compiler
+Users can view detailed friend profiles, including contact status, tags, and goals. The system highlights overdue or upcoming contacts, making it easier to maintain strong relationships.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
